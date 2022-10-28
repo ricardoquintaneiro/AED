@@ -1,6 +1,6 @@
-#include <stdio.h>
-
 /* Escreva um programa que converta um valor real em graus Fahreneit num valor em graus Celsius. */
+
+#include <stdio.h>
 
 int main() {
     float c, f;

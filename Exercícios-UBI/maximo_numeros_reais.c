@@ -1,6 +1,6 @@
-#include <stdio.h>
-
 /* Escreva um programa que calcule o máximo de dois valores reais usando operador condicional. */
+
+#include <stdio.h>
 
 int main() {
     float a, b;

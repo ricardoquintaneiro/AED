@@ -1,8 +1,8 @@
-#include <stdio.h>
-
 /* Escreva um programa que leia um número decimal de três dígitos a partir do teclado e que escreva no
 ecrã a correspondente expansão na base 10. Por exemplo, o número 937 terá a seguinte saída no ecrã:
 937 = 7 * 1 + 3 * 10 + 9 * 100. */
+
+#include <stdio.h>
 
 int main() {
     int n,centenas,dezenas,unidades;

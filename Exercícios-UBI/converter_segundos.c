@@ -1,8 +1,8 @@
-#include <stdio.h>
-
 /* Escreva um programa que calcule as horas, os minutos e os
 segundos dum dado tempo em segundos. Este tempo em segundos
 é entrado via teclado pelo utilizador. */
+
+#include <stdio.h>
 
 int main() {
     int t,horas,minutos,segundos;
