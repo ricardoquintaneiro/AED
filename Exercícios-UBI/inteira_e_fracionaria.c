@@ -1,6 +1,6 @@
-#include <stdio.h>
-
 /* Escreva um programa que determine a parte inteira e a parte fraccionária dum número real. */
+
+#include <stdio.h>
 
 int main() {
     double real;

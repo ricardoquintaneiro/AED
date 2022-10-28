@@ -1,0 +1,1 @@
+Exercícios feitos dos slides das aulas práticas de Programação da Universidade da Beira Interior - UBI

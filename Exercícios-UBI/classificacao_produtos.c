@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /* Escreva um algoritmo e depois um programa em C que identifique e classifique um produto num universo
 de 5 produtos possíveis, medindo a concentração de 3 elementos constituintes, A, B e C, de acordo com
 as concentrações dadas na seguinte tabela:
@@ -12,6 +10,8 @@ Produto 5  0.2 0.5 0.6
 Se as concentrações fornecidas pelo utilizador não corresponderem a nenhum produto da tabela, o
 classificador deverá escrever: “Produto desconhecido”; caso contrário, deverá escrever o número do
 produto identificado.*/
+
+#include <stdio.h>
 
 int main() {
     float produtos[5][3] = {0.1, 0.5, 0.6, 0.1, 0.3, 0.7, 0.2, 0.5, 0.7,

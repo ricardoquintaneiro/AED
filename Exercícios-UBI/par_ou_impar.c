@@ -1,6 +1,6 @@
-#include <stdio.h>
-
 /* Escreva um programa que determine se um número inteiro é par ou ímpar utilizando o operador condicional.*/
+
+#include <stdio.h>
 
 int main() {
     int a;
