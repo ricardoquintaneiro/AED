@@ -14,42 +14,55 @@ pessoa:
 • Categoria
 • Peso mínimo (PMI=19 ́* altura^2 ) para que uma pessoa pertença à categoria normal.
 • Peso máximo (PMA=25 ́* altura^2 ) para que uma pessoa pertença à categoria normal.
-Exemplo de funcionamento do programa:
-Input:
-    Introduza altura (m):
-    1.68
-    Introduza peso (kg):
-    55
-Output:
-    IMC=19.49
-    CATEGORIA=Normal
-    PMI=53.63
-    PMA=70.56
 */
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
     float altura, peso, imc;
     char *categoria;
-    printf("Input:\n\tIntroduza altura (m):\n");
-    scanf("\t%f",&altura);
-    printf("\tIntroduza peso (kg):\n");
-    scanf("\t%f",&peso);
-    imc = peso/(altura*altura);
-    printf("Output:\n\tIMC=%f\n", imc);
-    if (imc < 19)
-        categoria = "Magreza";
-    else if (imc <=25)
-        categoria = "Normal";
-    else if (imc <=30)
-        categoria = "Excesso de peso";
-    else if (imc <=40)
-        categoria = "Obesidade";
-    else
-        categoria = "Obesidade Mórbida";
-    printf("\tCATEGORIA=%s\n",categoria);
-    printf("\tPMI=%f\n",19*(altura*altura));
-    printf("\tPMA=%f\n",25*(altura*altura));
+    int escolha = -1;
+    do
+    {
+        printf("0- Sair\n");
+        printf("1- Cálculo do IMC e da respectiva categoria\n");
+        printf("2- Cálculo do peso e mínimo (PMI) e peso máximo (PMA) para que uma pessoal pertença à categoria normal\n\n");
+        scanf("%d", &escolha);
+        printf("\n");
+        switch (escolha)
+        {
+        case 0:
+            break;
+        case 1:
+            printf("Input:\n\tIntroduza altura (m): ");
+            scanf("\t%f", &altura);
+            printf("\tIntroduza peso (kg): ");
+            scanf("\t%f", &peso);
+            imc = peso / (altura * altura);
+            printf("Output:\n\tIMC=%.2f\n", imc);
+            if (imc < 19)
+                categoria = "Magreza";
+            else if (imc <= 25)
+                categoria = "Normal";
+            else if (imc <= 30)
+                categoria = "Excesso de peso";
+            else if (imc <= 40)
+                categoria = "Obesidade";
+            else
+                categoria = "Obesidade Mórbida";
+            printf("\tCATEGORIA=%s\n", categoria);
+            break;
+        case 2:
+            printf("Input:\n\tIntroduza altura (m): ");
+            scanf("\t%f", &altura);
+            printf("\tPMI=%.2f\n", 19 * (altura * altura));
+            printf("\tPMA=%.2f\n", 25 * (altura * altura));
+            break;
+        default:
+            printf("ERRO: opção inválida.\n");
+        }
+        printf("\n");
+    } while (escolha != 0);
     return 0;
 }
