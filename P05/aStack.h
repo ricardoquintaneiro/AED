@@ -17,7 +17,8 @@ class aStack
     int cur_size; // current stack size
     T *data;      // the stack data (stored in an array)
     void grow_array() {
-      int* temp = new int[++max_size];
+      max_size *= 2;
+      int* temp = new int[max_size];
       std::copy(data, data + cur_size*sizeof(T), temp);
       delete [] data;
       data = temp;
@@ -60,7 +61,7 @@ class aStack
     }
     void push(T &v)
     {
-      if (!(cur_size < max_size)) this->grow_array();
+      if (cur_size == max_size) this->grow_array();
       data[cur_size++] = v;
     }
     T pop(void)
