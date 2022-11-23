@@ -15,6 +15,9 @@
 // * the are no functions to free memory
 //
 
+#include <stdio.h>
+#include <stdlib.h>
+
 typedef struct hash_table_node
 {
   char key[64];
